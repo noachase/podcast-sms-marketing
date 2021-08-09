@@ -1,0 +1,22 @@
+{
+  "name": "gulp-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.22.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-stylelint": "^9.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recess-order": "^2.3.0",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}

@@ -1,0 +1,194 @@
+@import "normalize.scss";
+
+@font-face {
+  font-family: "CaviarDreams_Bold";
+  src: url("../fonts/CaviarDreams_Bold.eot");
+  src:
+    local("☺"),
+    url("../fonts/CaviarDreams_Bold.woff") format("woff"),
+    url("../fonts/CaviarDreams_Bold.ttf") format("truetype"),
+    url("../fonts/CaviarDreams_Bold.svg") format("svg");
+  font-style: bold;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Gilroy_Medium";
+  src: url("../fonts/Gilroy-Medium.eot");
+  src:
+    local("☺"),
+    url("../fonts/Gilroy-Medium.woff") format("woff"),
+    url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-style: medium;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Gilroy_Semibold";
+  src: url("../fonts/Gilroy-Semibold.eot");
+  src:
+    local("☺"),
+    url("../fonts/Gilroy-Semibold.woff") format("woff"),
+    url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+  font-style: semibold;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Gilroy_Bold";
+  src: url("../fonts/Gilroy-Bold.eot");
+  src:
+    local("☺"),
+    url("../fonts/Gilroy-Bold.woff") format("woff"),
+    url("../fonts/Gilroy-Bold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Bebas_Bold";
+  src: url("../fonts/BebasNeue_Bold.eot");
+  src:
+    local("☺"),
+    url("../fonts/BebasNeue_Bold.woff") format("woff"),
+    url("../fonts/BebasNeue_Bold.ttf") format("truetype");
+  font-style: bold;
+  font-weight: 700;
+}
+
+$glr_bld: "Gilroy_Bold";
+$glr_smb: "Gilroy_Semibold";
+$glr_med: "Gilroy_Medium";
+$bebas: "Bebas_Bold";
+$cav: "CaviarDreams_Bold";
+$color_main: #6a76ac;
+$color_white: #fff;
+$footer-logo-text-color: #f7f6fb;
+
+//---------------
+// $mobile: 414px;
+$desktop: 1440px;
+$tablet: 768px;
+$mobile: 450px;
+//---------------
+
+* {
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  width: 100%;
+  max-width: 1010px;
+  margin: 0 auto;
+  font-family: $glr_med;
+  background-color: #fff;
+}
+
+.privacy-container,
+.terms-container {
+  @media (max-width: $mobile) {
+    padding: 0 10px 50px 10px;
+  }
+}
+
+h1 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.last {
+  margin-top: 0;
+}
+
+.header {
+  margin-bottom: 120px;
+
+  @media (max-width: $mobile) {
+    margin-top: 34px;
+    margin-bottom: 55px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  &-logo {
+    padding-left: 44px;
+    text-align: left;
+    list-style: none;
+
+    a {
+      font-family: $cav;
+      font-size: 50px;
+      color: #3a406b;
+      text-decoration: none;
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      align-self: center;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+
+    &__link {
+      margin: 20px 5px;
+      list-style: none;
+
+      a {
+        padding: 10px;
+        font-family: $glr_bld;
+        font-size: 21px;
+        color: $color_main;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    &__blank {
+      margin: 23px 20px 20px 20px;
+      list-style: none;
+
+      a {
+        position: relative;
+        z-index: 100;
+        box-sizing: border-box;
+        padding: 12.5px 29px 12.5px 31px;
+        font-family: $glr_bld;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 17px;
+        color: $color_main;
+        vertical-align: middle;
+        background: none;
+        // cursor: pointer;
+        border: 0.6px solid $color_main;
+        border-radius: 12px;
+        transition: 0.5s;
+
+        &:hover {
+          color: $color_white;
+          cursor: pointer;
+          background: $color_main;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
+
+.email-link {
+  text-decoration: none;
+}
